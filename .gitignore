@@ -12,6 +12,8 @@
 /.next/
 /out/
 
+/utils/db/serviceAccountKey.json
+
 # production
 /build
 
@@ -32,3 +34,5 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+
