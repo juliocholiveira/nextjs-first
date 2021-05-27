@@ -28,3 +28,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<Card raised className={classes.root}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image={`images/avatar/${chave}g.jpg`}
+                  title="Contemplative Reptile"
+                />
+                <CardContent>
+                  <Typography>Júlio César</Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    0036 - MOSSORO
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
