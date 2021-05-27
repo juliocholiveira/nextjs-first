@@ -129,6 +129,8 @@ function Compromissos() {
     "F0641677",
   ]);
 
+  const [ativo, setAtivo] = useState(false);
+
   const carregarFuncis = () => {
     axios
       .post("/api/entry", {
@@ -150,23 +152,42 @@ function Compromissos() {
     >
       <Grid item lg={12} style={{ paddingTop: 5 }}>
         {chaves.map((chave) => {
-          return (
-            <img
-              src={`images/avatar/${chave}g.jpg`}
-              style={{
-                width: 80,
-                height: 80,
-                borderRadius: 50,
-                opacity: 0.3,
-                border: 2,
-                borderStyle: "solid",
-                borderColor: "#FAFF00",
-                margin: 3,
-              }}
-            />
-          );
+          if (ativo) {
+            return (
+              <img
+                src={`images/avatar/${chave}g.jpg`}
+                style={{
+                  width: 80,
+                  height: 80,
+                  borderRadius: 50,
+                  opacity: 1,
+                  border: 2,
+                  borderStyle: "solid",
+                  borderColor: "#FAFF00",
+                  margin: 3,
+                }}
+              />
+            );
+          } else {
+            return (
+              <img
+                src={`images/avatar/${chave}g.jpg`}
+                style={{
+                  width: 80,
+                  height: 80,
+                  borderRadius: 50,
+                  opacity: 0.3,
+                  border: 2,
+                  borderStyle: "solid",
+                  borderColor: "#FAFF00",
+                  margin: 3,
+                }}
+              />
+            );
+          }
         })}
       </Grid>
+      <button onClick={() => setAtivo(!ativo)}>Ativo</button>
     </Container>
   );
 }
