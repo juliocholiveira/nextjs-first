@@ -150,6 +150,19 @@ function Compromissos() {
       });
   };
 
+  const salvar = (chave) => {
+    axios
+      .post("/api/entry", {
+        slug: chave,
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
   useEffect(() => {
     const intervalo = setInterval(() => {
       carregarFuncis();
@@ -199,6 +212,7 @@ function Compromissos() {
                   borderColor: "#FAFF00",
                   margin: 3,
                 }}
+                onDoubleClick={() => salvar(chave)}
               />
             );
           }
