@@ -193,7 +193,7 @@ function Compromissos() {
                   border: 2,
                   borderStyle: "solid",
                   borderColor: "#FAFF00",
-                  margin: 3,
+                  margin: 2,
                 }}
               />
             );
@@ -210,7 +210,7 @@ function Compromissos() {
                   border: 2,
                   borderStyle: "solid",
                   borderColor: "#FAFF00",
-                  margin: 3,
+                  margin: 2,
                 }}
                 onDoubleClick={() => salvar(chave)}
               />
