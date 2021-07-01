@@ -17,7 +17,7 @@ function Enlid() {
     setSucesso(false);
 
     if (!chave) {
-      setErro("Favor informar a sua matrícula!");
+      setErro("Favor informar a sua matrícula!!!");
       return;
     }
 
