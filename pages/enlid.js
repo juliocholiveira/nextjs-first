@@ -6,6 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import axios from "axios";
 import { useState } from "react";
 import Alert from "@material-ui/lab/Alert";
+import db from "../utils/db";
 
 function Enlid() {
   const [chave, setChave] = useState("");
@@ -17,7 +18,7 @@ function Enlid() {
     setSucesso(false);
 
     if (!chave) {
-      setErro("Favor informar a sua matrícula!!!");
+      setErro("Favor informar a sua matrícula!");
       return;
     }
 
